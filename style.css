@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+* {
+	margin : 0px;
+	padding: 0px;
+	font-family: 'Lora', serif;
+}
+
+header{
+	background-color: #ff7d47;
+	position: sticky;
+	top : 0;
+	padding: 20px;
+}
+
+footer {
+	min-height: 10vh;
+	box-sizing: border-box;
+	background-color: #b53d00;
+}
+
+ul {
+	padding: 1em 0;
+	list-style: none;
+	padding: 0px;
+}
+
+ul:after {
+	clear: both;
+	content: "";
+  	display: table;
+}
+
+ul li {
+	display: inline;
+}
+
+header ul li a {
+
+	text-decoration: none;
+	text-transform: uppercase;
+
+	display: inline-block;
+	position: relative;
+	line-height: 61px;
+	padding: 0px 10px;
+	font-size: 18px;
+	letter-spacing: 3px;
+	font-family: 'Arimo', sans-serif;
+	font-weight: bold;
+	color: #ac1900;
+
+}
+
+header ul li a:hover {
+	background-color: #ff5513;
+}
+
+.anchor {
+	display: block;
+    position: relative;
+    top: -90px;
+    visibility: hidden;
+}
+
+.cakes {
+	align-content: center;
+}
+
+.cakes .block {
+	padding-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cakes .contaiment {
+	padding-top: 30px;
+	height: 100%;
+}
+
+.cakes img {
+	width: 320px;
+	height: 200px;
+}
+
+.content {
+	min-height: 255vh;
+	background-color: #ef6c00;
+}
+
+.contaiment {
+	box-sizing: border-box;
+	max-width: 1219px;
+	padding-left: 55px;
+	padding-right: 55px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+	padding-bottom: 30px;
+}
+
+.container-1 {
+	background-image: url('https://www.wallpapers4u.org/wp-content/uploads/cream_cake_chocolate_texture_background_decoration_sweets_77904_1920x1080.jpg');
+}
+
+.container-2 {
+	background-image: url("https://cdn.onebauer.media/one/media/5d44/1dad/d6e0/8577/7981/0b4e/cadbury-chocolate-products.jpg?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill");
+}
+
+.description {
+	color: #e6e4d9;
+	font-size: 18px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.footer {
+	text-align: center;
+	color : #e6e4d9;
+	font-size: 16px;
+	padding-top: 3%;
+}
+
+.navbar-logo {
+	display: inline-block;
+}
+
+.name {
+	font-size: 26px;
+	text-transform: uppercase;
+	color: #e6e4d9;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
+.paragraph {
+	min-height: 45vh;
+}
+
+.p-1 {
+	background-color: #ef6c00;
+}
+
+.p-2 {
+	background-color: #7e98a7;
+}
+
+.cakes {
+	min-height: 75vh;
+	background-color: #9f0000;
+}
+
+.block {
+	width: 27%;
+	padding-right: 5%;
+}
+
+.slide {
+	min-height: 45vh;
+	background-size: cover;
+}
+
+.slide .contaiment {
+	text-transform: uppercase;
+	font-size: 80px;
+	color: #e6e4d9;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.s-2 .contaiment {
+	color : #9f0000;
+}
+
+.p-2 .contaiment, .p-1 .contaiment {
+	color : #e6e4d9;
+	font-size: 26px;
+	padding-top: 60px;
+	box-sizing: border-box;
+}
