@@ -1,7 +1,94 @@
 ol {
-	type: upper-alpha;
+	list-style-position: inside;
+	list-style-type: circle;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 18px;
+	color: #ffffb3;
+	display: inline-block;
+
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 10px;
+	border-color: #b53d00;
 }
 
-li {
-	list-style-type: upper-alpha;
+.ing li {
+	padding-top: 1%;
 }
+
+img {
+	position: relative;
+	
+	height: calc(98% - 2px);
+	z-index: 1;
+}
+
+.recipe {
+	position: relative;
+	box-sizing: border-box;
+	border-radius: 0px 0px 10px 10px;
+	margin-left: 3%;
+	width: 97%;
+	font-size: 14px;
+}
+
+.ing {
+	background-color: #ef6c00;
+	position: relative;
+	font-size: 16px;
+	border-radius: 10px 0px 0px 0px;
+	z-index: 2;
+	box-sizing: border-box;
+	width: 48%;
+	height: 26vh;
+	margin-top: calc(14vh - 3px);
+	margin-left: calc(52% + 3px);
+}
+
+.f_layer {
+	box-sizing: border-box;
+	margin-left: 3%;
+	margin-top: 3%;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 10px 10px 0px 0px;
+	border-color: #b53d00;
+	position: relative;
+	display: inline-block;
+	width: 97%;
+	height: 40vh;
+	background-image: url("images/cake-napoleon.png");
+  	background-size:  100% 100%;
+}
+
+.element {
+	position: relative;
+	width: 35%
+}
+
+.f_layer:hover .ing {
+	opacity: 0.01;
+	transition: 0.5s;
+}
+
+.f_layer:not(:hover) .ing {
+	transition: 0.2s;
+}
+
+.recipe:hover {
+	border-radius: 10px 10px 10px 10px;
+	background-color: #ef6c00;	
+	z-index: 3;
+	margin-top: -40vh;
+	height: 90vh;
+	font-size: 18px;
+	transition: 0.5s;
+}
+
+.recipe:not(:hover) {
+	transition: 0.2s;
+}
+
+
