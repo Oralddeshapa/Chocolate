@@ -1,14 +1,19 @@
 .content {
-	min-height: 150vh;
+	min-height: 160vh;
 	background-color: #e6e4d9;
 }
 
+a {
+	text-decoration: none;
+	color: #ffffb3;
+}
+
 .sweets {
-	height: 150vh;
+	height: 160vh;
 	background-color: #ef6c00;
 }
 .element {
-	min-height: 65vh;
+	min-height: 70vh;
 	width: 26%;
 	padding-top: 2%;
 	padding-right: 2%;
@@ -51,7 +56,7 @@
 	transition: 0.5s;
 }
 
-.element:hover p, .element:hover .name {
+.element:hover p, .element:hover .name, .element:hover a {
 	color : #212121;
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;

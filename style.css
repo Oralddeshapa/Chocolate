@@ -63,6 +63,11 @@ header ul li a:hover {
     visibility: hidden;
 }
 
+.block {
+	width: 27%;
+	padding-right: 5%;
+}
+
 .cakes {
 	align-content: center;
 }
@@ -100,10 +105,12 @@ header ul li a:hover {
 }
 
 .container-1 {
+	text-shadow: black 0px 0px 1px;
 	background-image: url('https://www.wallpapers4u.org/wp-content/uploads/cream_cake_chocolate_texture_background_decoration_sweets_77904_1920x1080.jpg');
 }
 
 .container-2 {
+	text-shadow: black 0px 0px 1px;
 	background-image: url("https://cdn.onebauer.media/one/media/5d44/1dad/d6e0/8577/7981/0b4e/cadbury-chocolate-products.jpg?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill");
 }
 
@@ -147,12 +154,7 @@ header ul li a:hover {
 
 .cakes {
 	min-height: 80vh;
-	background-color: #9f0000;
-}
-
-.block {
-	width: 27%;
-	padding-right: 5%;
+	background-color: #ffffb3;
 }
 
 .slide {
@@ -161,6 +163,7 @@ header ul li a:hover {
 }
 
 .slide .contaiment {
+	text-shadow: black 2px 2px 2px;
 	text-transform: uppercase;
 	font-size: 80px;
 	color: #e6e4d9;
@@ -169,7 +172,49 @@ header ul li a:hover {
 }
 
 .s-2 .contaiment {
-	color : #9f0000;
+
+	color : #ffffb3;
+}
+
+.s-3 .bg{
+	position: relative;
+	min-height: 80vh;
+	background-image: url("https://i.artfile.ru/3005x1800_763999_[www.ArtFile.ru].jpg");
+	filter: blur(5px);
+	background-size:  100% 100%;
+	background-color: #ff9d3f;
+}
+
+.s-3 .contaiment {
+	margin-top: -90vh;
+	position: relative;
+	padding-top: 30vh;
+	color: #ef6c00;
+	font-size: 90px;
+	text-shadow: black 2px 2px 2px;
+}
+
+.s-3 a {
+	text-decoration: none;
+	color: #ef6c00;
+	font-size: 70px;
+
+}
+
+.s-3 .menu {
+	position: relative;
+	margin-top: 10vh;
+	background-color: #ffffb3;
+	display: inline-block;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 10px;
+	border-color: #b53d00;
+
 }
 
 .p-2 .contaiment, .p-1 .contaiment {
