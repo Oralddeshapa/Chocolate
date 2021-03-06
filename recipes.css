@@ -14,6 +14,10 @@ ol {
 	border-color: #b53d00;
 }
 
+.content {
+	min-height: 200vh;
+}
+
 .ing li {
 	padding-top: 1%;
 }
@@ -29,9 +33,10 @@ img {
 	position: relative;
 	box-sizing: border-box;
 	border-radius: 0px 0px 10px 10px;
-	margin-left: 3%;
+	margin-left: 2%;
 	width: 97%;
 	font-size: 14px;
+	height: 59vh;
 }
 
 .ing {
@@ -49,8 +54,8 @@ img {
 
 .f_layer {
 	box-sizing: border-box;
-	margin-left: 3%;
-	margin-top: 3%;
+	margin-left: 2%;
+	margin-top: 1%;
 	border-style: solid;
 	border-width: 3px;
 	border-radius: 10px 10px 0px 0px;
@@ -59,17 +64,49 @@ img {
 	display: inline-block;
 	width: 97%;
 	height: 40vh;
-	background-image: url("images/cake-napoleon.png");
   	background-size:  100% 100%;
 }
 
+.napoleon {
+	background-image: url("images/cake-napoleon.png");
+}
+
+.sharlotka {
+	background-image: url("images/sharlotka.png");
+}
+
+.kievskii {
+	background-image: url("images/kievskii.png");
+}
+
+.medovick {
+	background-image: url("images/medovik.png");
+}
+
+.praga {
+	background-image: url("images/praga.png");
+}
+
+.cheescake {
+	background-image: url("images/chiscake.png");
+}
+
 .element {
+	display: inline-block;
 	position: relative;
-	width: 35%
+	width: 33%;
+	height: 99vh;
+	box-sizing: border-box;
+	margin-bottom: 1%;
 }
 
 .f_layer:hover .ing {
 	opacity: 0.01;
+	transition: 0.5s;
+}
+
+.f_layer:hover {
+	background-color: #ff9d3f;
 	transition: 0.5s;
 }
 
@@ -79,12 +116,12 @@ img {
 
 .recipe:hover {
 	border-radius: 10px 10px 10px 10px;
-	background-color: #ef6c00;	
+	background-color: #ff9d3f;
+	color : #212121;	
 	z-index: 3;
 	margin-top: -40vh;
-	height: 90vh;
+	height: 99vh;
 	font-size: 18px;
-	transition: 0.5s;
 }
 
 .recipe:not(:hover) {
