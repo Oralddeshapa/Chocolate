@@ -72,6 +72,10 @@ header ul li a:hover {
 	align-content: center;
 }
 
+.cakes .menu:hover {
+	background-color: #ffe082
+}
+
 .cakes .block {
 	padding-top: 20px;
 	display: inline-block;
