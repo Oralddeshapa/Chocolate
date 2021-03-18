@@ -1,5 +1,5 @@
 .content {
-	min-height: 160vh;
+	min-height: 240vh;
 	background-color: #e6e4d9;
 }
 
@@ -9,16 +9,19 @@ a {
 }
 
 .sweets {
-	height: 160vh;
+	height: 240vh;
 	background-color: #ef6c00;
 }
+
 .element {
 	min-height: 70vh;
 	width: 26%;
 	padding-top: 2%;
 	padding-right: 2%;
 	padding-left: 2%;
-	margin : 1%;
+    margin : 1%;
+    margin-left: calc(2%);
+    margin-right: 0;
 	background-color: #ef6c00;
 	display: inline-block;
 	vertical-align: top;
@@ -56,7 +59,7 @@ a {
 	transition: 0.5s;
 }
 
-.element:hover p, .element:hover .name, .element:hover a {
+.element:hover p, .element:hover .name, .element:hover a, .element:hover li {
 	color : #212121;
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;
@@ -74,6 +77,58 @@ a {
 	transition: 0.5s;
 }
 
-.element:not(:hover) img, .element:not(:hover) p, .element:not(:hover) .name{
+.element:not(:hover) img, .element:not(:hover) p, .element:not(:hover) .name, .element:not(:hover) li{
 	transition: 0.5s;
 }
+
+.element:last-child {
+	display: block;
+	background-color: #ef6c00;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.element:last-child .img-holder {
+	width: 100%;
+	height: 200px;
+}
+
+.element:last-child img {
+	width: 42%;
+	height: 80%;
+	margin-left: auto;
+    margin-right: auto;
+    padding-top: 4%;
+    display: block;
+}
+
+.element:last-child .img-holder {
+	align-content: center;
+}
+
+ol {
+	list-style-position: inside;
+	list-style-type: circle;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
+	font-size:24px;
+	color: #ffffb3;
+	display: inline-block;
+}
+
+li:first-child{
+	list-style-type: none;
+	padding-bottom: 10%;
+}
+
+li:last-child {
+	list-style-type: none;
+	padding-top: 10%;
+	font-size:20px;
+}
+
+li {
+	padding-bottom: 2%
+}
+
