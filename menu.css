@@ -151,4 +151,5 @@ button {
 	min-height: 80vh;
 	top: 10vh;
 	left: 10%;
+	border-radius: 40px;
 }
