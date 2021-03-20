@@ -18,4 +18,10 @@ customize.onclick = function (){
    space.classList.add('white_space');
    document.body.insertBefore(space, document.getElementsByClassName('content')[0]);
    document.getElementsByClassName('content')[0].style.marginTop = "-80vh";
+   let Things = [];
+   for (let i = 0; i <= 2; i++) {
+   	Things.push(document.createElement('div'));
+   	Things[i].classList.add('form_element');
+   	space.appendChild(Things[i]);
+   }
 }
