@@ -172,6 +172,7 @@ button {
 .form_element img {
 	width: 100%;
 	height: 100%;
+	border-radius: 20px 20px 0px 0px;
 }
 
 .form_element .description {
@@ -192,6 +193,9 @@ hr {
 	margin-left: 10%;
 	background-size: 100% 100%;
 	background-image: url("images/sharlotka.png");
+	background-repeat: no-repeat;
+	margin-top:10px;
+	margin-bottom: 10px;
 }
 
 .recipe {
@@ -209,7 +213,7 @@ hr {
 	position: relative;
 	width: calc(49% - 1px);
 	left: 60%;
-	height: 50%;
+	height: calc(50% + 10px);
 	top: calc(50% - 2px);
 
 	border-radius: 10px 0px 0px 0px;
@@ -233,6 +237,19 @@ select {
 	color: #ffffb3;
 	font-size: 16px;
 }
+
+.form_element .img-holder,  .form_element .img-holder img{
+	max-height: 50vh;
+}
+
+.form_element .img-holder img {
+	display: block;
+ 	 margin: 0 auto;
+ 	 padding-top: 10px;
+ 	 padding-bottom: 10px;
+}
+
+
 
 input[type='range'] {
       overflow: hidden;
@@ -271,4 +288,21 @@ select {
 	font-size: 16px;
 	border-radius: 4px;
 	background-color: #eeca77;
+}
+
+.input_form button {
+	font-size: 15px;
+	background-color: #eeca77;
+	border-radius: 2px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #eeca77;
+	padding: 1px;
+}
+
+.input_form .save {
+	margin-top: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding: 5px;
 }
