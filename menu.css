@@ -42,7 +42,7 @@ a {
 	height: 250px;
 }
 
-.element .name {
+.name {
 	text-align: center;
 	color: #ffffb3;
 }
@@ -124,14 +124,14 @@ ol {
 	padding-bottom: 10%;
 }
 
-.customli:last-child {
+.custom li:last-child {
 	list-style-type: none;
 	padding-top: 10%;
 	font-size:20px;
 }
 
 li {
-	padding-bottom: 2%
+	padding-top: 2%
 }
 
 button {
@@ -176,6 +176,7 @@ button {
 
 .form_element .description {
 	padding-top: 10px;
+	color: #ffffb3;
 }
 
 hr {
@@ -185,17 +186,12 @@ hr {
 	height: 2px;
 }
 
-.ing {
+.ing_custom {
 	height: 30vh;
 	width: 80%;
 	margin-left: 10%;
 	background-size: 100% 100%;
 	background-image: url("images/sharlotka.png");
-}
-
-.ing_list {
-	background-color: #ef6c00;
-	position: relative;
 }
 
 .recipe {
@@ -209,12 +205,70 @@ hr {
 }
 
 .ing_list {
-	width: 40%;
+	background-color: #ef6c00;
+	position: relative;
+	width: calc(49% - 1px);
 	left: 60%;
 	height: 50%;
-	top: 50%;
-	overflow: auto;
-	border-radius: 5px 0px 0px 0px;
+	top: calc(50% - 2px);
+
+	border-radius: 10px 0px 0px 0px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #b53d00;
 
 	overflow: auto;
+}
+
+.input_form {
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+select {
+	margin-bottom: 2%;
+}
+
+.form_element {
+	color: #ffffb3;
+	font-size: 16px;
+}
+
+input[type='range'] {
+      overflow: hidden;
+      width: 50%;
+      -webkit-appearance: none;
+      background-color: #ffffb3;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 15px;
+      -webkit-appearance: none;
+      color: #b53d00;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 15px;
+      cursor: ew-resize;
+      background: #050d10;
+      box-shadow: -100px 0 0 100px #b53d00;
+    }
+
+input[type='text'], textarea
+{
+	width: 70%;
+	max-width: 70%;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #eeca77;
+}
+
+select {
+	width: 40%;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #eeca77;
 }
