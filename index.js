@@ -115,7 +115,7 @@ customize.onclick = function (){
     let li_list = document.querySelector('.ing_list').getElementsByTagName('li');
     for (let i = 0; i < li_list.length; i ++)
     {
-    	 if(li_list[i].innerHTML == val)
+    	 if(li_list[i].innerHTML.toLowerCase() == val.toLowerCase())
     	 	return;
     }
     if (val != "")
@@ -138,7 +138,7 @@ customize.onclick = function (){
     let li_list = document.querySelector('.recipe').getElementsByTagName('li');
     for (let i = 0; i < li_list.length; i ++)
     {
-    	 if(li_list[i].innerHTML == val)
+    	 if(li_list[i].innerHTML.toLowerCase() == val.toLowerCase())
     	 	return;
     }
     if (val != "")
