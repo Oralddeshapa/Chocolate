@@ -8,63 +8,16 @@ footer = footer[0];
 sweets = sweets[0];
 name = name[name.length - 1];
 
-const first = `
-			<div class="img-holder"><img src="images/sharlotka.png" alt="cake"></div>
-			<hr/>
-			<div class="name">Your name goes here</div> 
-			<hr/>
-			<p class="description">And here is description</p>
-			`
+let first, second, third;
 
-const second = `
-			<div class="ing_custom">
-				<ol class="ing_list">
-					<li>Water</li>
-					<li>Flavor</li>
-				</ol>
-			</div>
-			<hr/>
-			<ol class="recipe">
-				<li>Boil Water</li>
-				<li>Mix water with flavor</li>
-			</ol>
-			`
-
-const third = `
-			<div class="input_form">
-				<p><b>URL to cake photo:</b><br>
-	   				<input class="url_in" type="text" size="40" placeholder="Your photo">
-	  			</p>
-	  			<p><b>Cake name:</b><br>
-	   				<input class="name_in" type="text" size="40" placeholder="Your name goes here">
-	  			</p>
-	  			<p><b>Description:</b><br>
-	   				<textarea class="desc_in" cols="40" rows="3" placeholder="And here is description"></textarea>
-	  			</p>
-	  			<p><b>Picture size:</b><br>
-	  				<input class="range_in" type="range" min="50" max="100" value="100">
-	  			</p>
-	  			<p><b>Ingridients:</b><br>
-	  				<select class="ing_option" size="1">
-				      <option value="1">Water</option>
-				      <option value="2">Flavor</option>
-				    </select>
-				    <button class="add_ing">ADD</button>
-				    <input class="ing_in" type="text" size="40">
-				</p>
-				<p><b>Steps:</b><br>
-	  				<select class="steps" size="1">
-				      <option value="1">Boil water</option>
-				      <option value="2">Mix water with flavor</option>
-				    </select>
-				    <button class="add_step">ADD</button>
-				    <textarea class="step_in" cols="40" rows="3"></textarea>
-				</p>
-				<button class="save" >Save</button>
-			</div>
-			`
+async function get_data() {
+	first = await fetch('./blocks/first.html');
+	second = await fetch('./blocks/second.html');
+	third = await fetch('./blocks/third.html');
+}
 
 customize.onclick = function (){
+   get_data();
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
