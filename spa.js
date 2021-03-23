@@ -43,7 +43,7 @@ class SPA {
   }
 
   pushBlock(block) {
-        this.state.currentSlide = slide;
+        this.state.currentSlide = block;
         window.history.pushState(this.state, null, "");
         this.render();
     }
