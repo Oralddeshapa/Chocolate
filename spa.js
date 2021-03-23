@@ -28,8 +28,6 @@ class BlocksManager {
 	async prepareBlocks(){
 		for (let name of this.blocksList) {
             const next = await this.createBlock(name)
-            alert(name);
-            alert(next);
             this.blocks.push(next);
         }
 
@@ -84,5 +82,9 @@ class SPA {
 
 const BB = new BlocksManager();
 const Spa = new SPA();
+
+for (let kappa of BB.blocks) {
+    alert(kappa.text);
+}
 
 Spa.pushBlock(BB.blocks[0]);
