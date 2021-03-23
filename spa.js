@@ -21,7 +21,7 @@ class BlocksManager {
 
 	async prepareBlocks(){
 		for (let name of this.blocksList){
-			const block = await fetch('./blocks/${name}.hmtl');
+			const block = await fetch('./blocks/${name}.html');
 			const content = await block.text();
 			this.blocks.push(new Block(name, content));
 		}
