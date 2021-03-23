@@ -45,6 +45,7 @@ class SPA {
   pushBlock(block) {
         this.state.currentBlock = block;
         window.history.pushState(this.state, null, "");
+        alert(this.state.currentBlock.text);
         this.render();
     }
 
@@ -58,7 +59,6 @@ class SPA {
   }
 
   render() {
-      alert(this.state.currentBlock.text);
     let oldBlock = document.getElementById('old-block');
     if (oldBlock != null) {
       oldBlock.parentNode.removeChild(oldBlock);
