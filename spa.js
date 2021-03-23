@@ -35,7 +35,7 @@ class SPA {
       this.init();
       this.changeBack();
       this.state = {
-         currentSlide: null;
+         currentSlide: null
       };
   }
 
@@ -67,7 +67,7 @@ class SPA {
     newBlock.id = 'old-block';
     if (this.state.currentBlock != undefined) {
       newBlock.innerHTML = this.state.currentBlock.htmlContent;
-      document.body.insetBefore(newBlock, document.getElementsByTagName('footer')[0]);
+      document.body.insertBefore(newBlock, document.getElementsByTagName('footer')[0]);
     }
     else 
       alert('What?');
