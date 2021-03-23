@@ -27,7 +27,7 @@ class BlocksManager {
 
 	async prepareBlocks(){
 		for (let name of this.blocksList) {
-            const next = this.createBlock(name)
+            const next = await this.createBlock(name)
             alert(name);
             alert(next);
             this.blocks.push(next);
