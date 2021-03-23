@@ -21,7 +21,6 @@ class BlocksManager {
 
 	async prepareBlocks(){
 		for (let name of this.blocksList){
-      alert(name);
 			const block = await fetch('./blocks/${name}.html');
 			const content = await block.text();
 			this.blocks.push(new Block(name, content));
@@ -35,16 +34,16 @@ class SPA {
       this.init();
       this.changeBack();
       this.state = {
-         currentSlide: null
+          currentBlock: null
       };
   }
 
-  initialize() {
+  init() {
     window.history.replaceState(this.state, null, "");
   }
 
   pushBlock(block) {
-        this.state.currentSlide = block;
+        this.state.currentBlock = block;
         window.history.pushState(this.state, null, "");
         this.render();
     }
