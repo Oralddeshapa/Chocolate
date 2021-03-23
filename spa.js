@@ -45,7 +45,6 @@ class SPA {
   pushBlock(block) {
         this.state.currentBlock = block;
         window.history.pushState(this.state, null, "");
-        alert(this.state.currentBlock.text);
         this.render();
     }
 
@@ -77,5 +76,8 @@ class SPA {
 
 const BB = new BlocksManager();
 const Spa = new SPA();
+
+for (let kappa of BB.blocksList)
+    alert(kappa.text);
 
 Spa.pushBlock(BB.blocksList[0]);
