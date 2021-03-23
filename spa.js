@@ -58,6 +58,7 @@ class SPA {
   }
 
   render() {
+      alert(this.state.currentBlock.text);
     let oldBlock = document.getElementById('old-block');
     if (oldBlock != null) {
       oldBlock.parentNode.removeChild(oldBlock);
