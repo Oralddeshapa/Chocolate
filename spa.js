@@ -31,7 +31,7 @@ class BlocksManager {
 			this.blocks.push(next);
 		}
 
-        for (let kappa of this.blocksList)
+        for (let kappa of this.blocks)
             alert(kappa.text);
 
 	}
@@ -86,4 +86,4 @@ class SPA {
 const BB = new BlocksManager();
 const Spa = new SPA();
 
-Spa.pushBlock(BB.blocksList[0]);
+Spa.pushBlock(BB.blocks[0]);
