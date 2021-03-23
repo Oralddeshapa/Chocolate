@@ -23,7 +23,9 @@ class BlocksManager {
 		for (let name of this.blocksList){
 			const block = await fetch(`./blocks/${name}.html`);
 			const content = await block.text();
-			this.blocks.push(new Block(name, content));
+			const new_block = new Block(name, content)
+			this.blocks.push(new_block);
+
 		}
 	}
 }
