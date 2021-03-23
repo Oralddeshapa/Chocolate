@@ -21,8 +21,7 @@ class BlocksManager {
 
 	async prepareBlocks(){
 		for (let name of this.blocksList){
-			const block = await fetch('./blocks/${name}.html');
-            alert('./blocks/${name}.html');
+			const block = await fetch(`./blocks/${name}.html`);
 			const content = await block.text();
 			this.blocks.push(new Block(name, content));
 		}
@@ -78,5 +77,4 @@ class SPA {
 const BB = new BlocksManager();
 const Spa = new SPA();
 
-alert(BB.blocksList[0].text);
 Spa.pushBlock(BB.blocksList[0]);
