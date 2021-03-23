@@ -26,13 +26,12 @@ class BlocksManager {
     }
 
 	async prepareBlocks(){
-		for (let name of this.blocksList){
+		for (let name of this.blocksList) {
             const next = this.createBlock(name)
-			this.blocks.push(next);
-		}
-
-        for (let kappa of this.blocks)
-            alert(kappa.text);
+            alert(name);
+            alert(next);
+            this.blocks.push(next);
+        }
 
 	}
 }
