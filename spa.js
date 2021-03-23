@@ -24,6 +24,7 @@ class BlocksManager {
 			const block = await fetch(`./blocks/${name}.html`);
 			const content = await block.text();
 			this.blocks.push(new Block(name, content));
+			alert(content);
 		}
 	}
 }
