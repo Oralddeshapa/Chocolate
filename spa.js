@@ -77,4 +77,5 @@ class SPA {
 const BB = new BlocksManager();
 const Spa = new SPA();
 
+alert(BB.blocksList[0].text);
 Spa.pushBlock(BB.blocksList[0]);
