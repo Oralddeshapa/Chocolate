@@ -25,8 +25,11 @@ class BlocksManager {
 			const content = await block.text();
 			const new_block = new Block(name, content)
 			this.blocks.push(new_block);
-
 		}
+
+        for (let kappa of this.blocksList)
+            alert(kappa.text);
+
 	}
 }
 
@@ -78,8 +81,5 @@ class SPA {
 
 const BB = new BlocksManager();
 const Spa = new SPA();
-
-for (let kappa of BB.blocksList)
-    alert(kappa.text);
 
 Spa.pushBlock(BB.blocksList[0]);
