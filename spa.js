@@ -19,12 +19,16 @@ class BlocksManager {
 		this.prepareBlocks();
 	}
 
+	async createBlock(name){
+        const block = await fetch(`./blocks/${name}.html`);
+        const content = await block.text();
+        return new Block(name, content);
+    }
+
 	async prepareBlocks(){
 		for (let name of this.blocksList){
-			const block = await fetch(`./blocks/${name}.html`);
-			const content = await block.text();
-			const new_block = new Block(name, content)
-			this.blocks.push(new_block);
+            const next = this.createBlock(name)
+			this.blocks.push(next);
 		}
 
         for (let kappa of this.blocksList)
