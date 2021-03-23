@@ -24,7 +24,6 @@ class BlocksManager {
 			const block = await fetch(`./blocks/${name}.html`);
 			const content = await block.text();
 			this.blocks.push(new Block(name, content));
-			alert(content);
 		}
 	}
 }
@@ -66,7 +65,7 @@ class SPA {
     let newBlock = document.createElement('div');
     newBlock.id = 'old-block';
     if (this.state.currentBlock != undefined) {
-      newBlock.innerHTML = this.state.currentBlock.htmlContent;
+      newBlock.innerHTML = this.state.currentBlock.text;
       document.body.insertBefore(newBlock, document.getElementsByTagName('footer')[0]);
     }
     else 
