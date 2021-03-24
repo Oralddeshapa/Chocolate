@@ -15,6 +15,8 @@ async function get_data() {
 			<hr/>
 			<p class="description">And here is description</p>`
 	second = await fetch('second.html');
+	second = second.text();
+
 	third = await fetch('third.html');
 }
 
