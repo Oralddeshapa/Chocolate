@@ -9,13 +9,17 @@ sweets = sweets[0];
 name = name[name.length - 1];
 
 async function get_data() {
-	first = await fetch('first.html');
+	first = `<div class="img-holder"><img src="images/sharlotka.png" alt="cake"></div>
+			<hr/>
+			<div class="name">Your name goes here</div> 
+			<hr/>
+			<p class="description">And here is description</p>`
 	second = await fetch('second.html');
 	third = await fetch('third.html');
 }
 
 customize.onclick = function (){
-   get_data();
+   await get_data();
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
