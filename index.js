@@ -19,7 +19,7 @@ async function get_data() {
 }
 
 customize.onclick = function (){
-   await get_data();
+   get_data();
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
