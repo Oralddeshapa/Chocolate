@@ -72,55 +72,7 @@ export class Navigator {
         let slideBlock = document.createElement('div');
         slideBlock.id = 'slide-block';
         if (this.state.currentSlide != undefined) {
-            slideBlock.innerHTML = `<header>
-    
-    <ul>
-      <li><a href="#Chocolate">Black</a></li>
-      <li><a href="#White">White</a></li>
-      <li><a href="#Sweets">Cakes</a></li>
-    </ul>
-  </header>
-
-  <div class="content">
-    <div class="container-1">
-      <div class="slide s-1">
-        <a class="anchor" name="Chocolate"></a> 
-        <div class="contaiment">
-          Black Chocolate
-        </div>  
-      </div>
-      <div class="paragraph p-1">
-        <div class="contaiment">
-          Шокола́д — кондитерское изделие на основе масла какао, являющееся продуктом переработки какао-бобов — семян шоколадного дерева, богатых теобромином и кофеином. Шоколад входит в состав большого количества продуктов — преимущественно десертных. Шоколад в качестве подарков выпускается в различных формах и является традиционным на некоторых праздниках, таких как Пасха и День святого Валентина. Кроме того, шоколад используется в горячих и холодных напитках, таких как шоколадное молоко и горячий шоколад.
-        </div>
-      </div>
-    </div>
-
-    <div class="container-2">
-      <div class="slide s-2">
-        <a class="anchor" name="White"></a>
-        <div class="contaiment">
-          White Chocolate
-        </div>
-      </div>
-      <div class="paragraph p-2">
-        <div class="contaiment">
-          Белый шоколад — шоколад, который вырабатывают из масла какао, сахара, плёночного сухого молока и ванилина без добавления какао-порошка, благодаря чему он имеет цвет слоновой кости (часто с желтоватым оттенком) и содержит минимум антиоксидантов, таких, как теобромин и кофеин.Своеобразным вкусом этот продукт обязан особому сухому молоку, имеющему карамельный привкус, а в качестве ароматизатора чаще всего используется ванилин.
-        </div>
-      </div>
-    </div>  
-
-    <div class="cakes">
-      <a class="anchor" name="Sweets"></a>
-      <div class="slide s-3">
-        <div class="bg"></div>
-        <div class="contaiment">
-          <div>Cakes menu</div>
-            <div class="menu"><a href="menu.html">Menu</a></div>
-        </div>
-      </div>
-    </div>
-  </div>`;
+            slideBlock.innerHTML = this.state.currentSlide.htmlContent;
             document.body.insertBefore(slideBlock, document.getElementsByTagName('footer')[0]);
         }
         else {
@@ -132,7 +84,7 @@ export class Navigator {
 const navigator = new Navigator();
 const slideManager = new SlideManager();
 
-navigator.pushSlide(slideManager.slides[1]);
+navigator.pushSlide(slideManager.slides[slideManager.slides.length - 1]);
 
 
 
