@@ -9,9 +9,9 @@ sweets = sweets[0];
 name = name[name.length - 1];
 
 async function get_data() {
-	first = await fetch('blocks/first.html');
-	second = await fetch('blocks/second.html');
-	third = await fetch('blocks/third.html');
+	first = await fetch('first.html');
+	second = await fetch('second.html');
+	third = await fetch('third.html');
 }
 
 customize.onclick = function (){
