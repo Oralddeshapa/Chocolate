@@ -83,5 +83,5 @@ class SPA {
 const BB = new BlocksManager();
 const Spa = new SPA();
 
-setTimeout(() => { Spa.pushBlock(BB.blocks[0]); }, 5000);
+setTimeout(() => { Spa.pushBlock(BB.blocks[0]); }, 2000);
 
