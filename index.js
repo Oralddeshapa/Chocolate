@@ -14,11 +14,10 @@ async function get_data() {
 			<div class="name">Your name goes here</div> 
 			<hr/>
 			<p class="description">And here is description</p>`
-	second = await fetch('second.html');
-	alert(second);
-	second = await second.text();
-	alert(second);
+	let temp = await fetch('second.html');
+	second = await temp.text();
 
+	temp = await fetch('third.html');
 	third = await fetch('third.html');
 }
 
