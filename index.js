@@ -16,7 +16,7 @@ async function get_data() {
 			<p class="description">And here is description</p>`
 	second = await fetch('second.html');
 	alert(second);
-	second = second.text();
+	second = await second.text();
 	alert(second);
 
 	third = await fetch('third.html');
