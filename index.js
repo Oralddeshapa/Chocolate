@@ -21,10 +21,11 @@ async function get_data() {
 	third = await fetch('third.html');
 }
 
-customize.onclick = function (){
-   get_data();
-   alert(second);
+get_data();
 
+customize.onclick = function (){
+
+   alert(second);
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
