@@ -9,23 +9,18 @@ sweets = sweets[0];
 name = name[name.length - 1];
 
 async function get_data() {
-	first = `<div class="img-holder"><img src="images/sharlotka.png" alt="cake"></div>
-			<hr/>
-			<div class="name">Your name goes here</div> 
-			<hr/>
-			<p class="description">And here is description</p>`
-	let temp = await fetch('second.html');
+	let temp = await fetch('blocks/first.html');
+	first = await temp.text();
+	temp = await fetch('blocks/second.html');
 	second = await temp.text();
-	alert(second);
-	temp = await fetch('third.html');
-	third = await fetch('third.html');
+	temp = await fetch('blocks/third.html');
+	third = await temp.text();
 }
 
 get_data();
 
 customize.onclick = function (){
 
-   alert(second);
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
