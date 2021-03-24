@@ -16,13 +16,15 @@ async function get_data() {
 			<p class="description">And here is description</p>`
 	let temp = await fetch('second.html');
 	second = await temp.text();
-
+	alert(second);
 	temp = await fetch('third.html');
 	third = await fetch('third.html');
 }
 
 customize.onclick = function (){
    get_data();
+   alert(second);
+
    name.innerHTML = "ADD"
    div = document.createElement("div");
    div.className = "CustomForm";
