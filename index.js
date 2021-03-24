@@ -1,4 +1,4 @@
-//firebase deploy --only hosting
+let first, second, third;
 
 let customize = document.querySelector('.customize');
 let name = document.getElementsByClassName('name');
@@ -8,12 +8,10 @@ footer = footer[0];
 sweets = sweets[0];
 name = name[name.length - 1];
 
-let first, second, third;
-
 async function get_data() {
-	first = await fetch('./blocks/first.html');
-	second = await fetch('./blocks/second.html');
-	third = await fetch('./blocks/third.html');
+	first = await fetch('blocks/first.html');
+	second = await fetch('blocks/second.html');
+	third = await fetch('blocks/third.html');
 }
 
 customize.onclick = function (){
