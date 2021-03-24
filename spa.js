@@ -1,6 +1,96 @@
 //firebase deploy --only hosting
 
-class Block {
+export class Slide {
+
+    constructor(title, htmlContent) {
+        this.title = title;
+        this.htmlContent = htmlContent;
+    }
+}
+
+export class SlideManager {
+
+    constructor() {
+        this.slideTitleList = [
+            `index_body`,
+            `menu_body`,
+            `recipes_body`
+        ];
+        this.slides = [];
+        this.loadSlides();
+    }
+
+
+    async loadSlide(slideTitle) {
+        const response = await fetch(`./blocks/${slideTitle}.html`);
+        const slideContent = await response.text();
+        return new Slide(slideTitle, slideContent);
+    }
+
+    async loadSlides() {
+        for (let slideTitle of this.slideTitleList) {
+            const nextSlide = await this.loadSlide(slideTitle);
+            this.slides.push(nextSlide);
+        }
+    }
+}
+
+export class Navigator {
+
+    constructor() {
+        this.initialize();
+        this.configureOnPopHandler();
+        this.state = {
+            currentSlide: null,
+        };
+    }
+
+    initialize() {
+        window.history.replaceState(this.state, null, "");
+    }
+
+    configureOnPopHandler() {
+        let that = this;
+        window.onpopstate = function (event) {
+            if (event.state) { that.state = event.state; }
+            that.render();
+        };
+    }
+
+    pushSlide(slide) {
+        this.state.currentSlide = slide;
+        window.history.pushState(this.state, null, "");
+        this.render();
+    }
+
+
+    render() {
+        let oldSlideBlock = document.getElementById('slide-block');
+        if (oldSlideBlock != null) {
+            oldSlideBlock.parentNode.removeChild(oldSlideBlock);
+        }
+        let slideBlock = document.createElement('div');
+        slideBlock.id = 'slide-block';
+        if (this.state.currentSlide != undefined) {
+            slideBlock.innerHTML = this.state.currentSlide.htmlContent;
+            document.body.insertBefore(slideBlock, document.getElementsByTagName('footer')[0]);
+        }
+        else {
+            console.log('ERROR: Current slide is undefined!');
+        }
+    }
+}
+
+const navigator = new Navigator();
+const slideManager = new SlideManager();
+
+navigator.pushSlide(slideManager.slides[1]);
+
+
+
+
+
+/*class Block {
 	constructor(name, text) {
 		this.name = name;
 		this.text = text;
@@ -10,9 +100,9 @@ class Block {
 class BlocksManager {
 	constructor() {
 		this.blocksList = [
-		'index_body',
-		'menu_body',
-		'recipes_body'
+		`index_body`,
+		`menu_body`,
+		`recipes_body`
 		];
 
 		this.blocks = [];
@@ -58,9 +148,9 @@ class SPA {
     let that = this;
     window.onpopstate = function(event) {
       if (event.state) 
-        that.state = event.state;
+      { that.state = event.state;}
       that.render();
-    }
+    };
   }
 
   render() {
@@ -82,9 +172,5 @@ class SPA {
 
 const BB = new BlocksManager();
 const Spa = new SPA();
-
-for (let kappa of BB.blocks) {
-    alert(kappa.text);
-}
 
 Spa.pushBlock(BB.blocks[0]);
